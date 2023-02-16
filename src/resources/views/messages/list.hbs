@@ -1,0 +1,37 @@
+<div style="display:flex; justify-content: center;margin:1%">
+  <a href="/room/list" class="btn-admin"><button type="button" class="btn btn-primary">Phòng</button></a>
+  <a href="/reservation/list" class="btn-admin"><button type="button" class="btn btn-secondary">Đặt phòng</button></a>
+  <a href="/user/list" class="btn-admin"><button type="button" class="btn btn-success">Tài khoản</button></a>
+  <a href="/message/list" class="btn-admin"><button type="button" class="btn btn-danger">Tin nhắn</button></a>
+</div>
+<style>
+  .btn-admin{
+    margin: 0.5%;
+  }
+</style>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Tổng: {{message.length}}</th>
+      <th scope="col">Số điện thoại</th>
+      <th scope="col">Tin nhắn</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each message}}
+      <tr>
+        <th scope="row">{{sum @index 1}}</th>
+        <td>{{this.phoneNumber}}</td>
+        <td>{{this.message}}</td>
+      </tr>
+      {{else}}
+      <tr>
+        <td colspan="5" style="text-align: center;">Không có phản hồi nào từ khách hàng!!</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+
+

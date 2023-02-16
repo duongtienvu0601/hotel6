@@ -1,0 +1,24 @@
+
+<div class="card mb-3 detail_container " style="width: 40rem; margin: auto">
+  <h3 class="card-title detail_title" style="text-align:center;">Details of room number {{room.roomNumber}}</h3>
+  <img src="{{room.image}}" class="card-img-top " alt="...">
+  <div class="card-body">
+    <div style="display: flex; justify-content: space-around; margin: 1rem auto">
+      <h2 style="color: #131859;">{{room.cost}} $</h2>
+      <a href="/reservation/{{room.roomNumber}}" class="btn btn-primary">Book now!!!</a>
+    </div>
+    <p class="card-text" style="text-align:justify;">Located in the heart of Hanoi city, The Q Hotel is invested with a system of rooms with different area from 27-37 m2 to suit many needs of customers. Modern equipment system, air-conditioner, led screen TV, luxury sofa, convenient wifi and services to visit tourist attractions. Designed and decorated in luxurious and functional French architecture, it brings satisfaction and comfort to customers during their stay at The Q Hotel.
+
+Q Hotel is known as one of the classy Boutique Hotels in this beautiful Old City. It is not only a perfect weekend getaway for families and loved ones, but also a paradise for couples to experience romantic vacations. In addition, The Q Hotel is also an ideal stopover for businessmen and employees in Hanoi city.
+
+With a convenient location in the center of Hanoi's main district and tourist attractions, it is very convenient to transfer:</p>
+    <p class="card-text"><small class="text-muted">Type bed: {{room.type}}</small></p>
+    
+  </div>
+</div>
+
+<style>
+  .detail_title{
+    margin-top: 1rem;
+  }
+</style>
